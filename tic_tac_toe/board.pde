@@ -1,14 +1,3 @@
-  PShape circle;
-  int[][] gameBoard = new int[3][3];     
-  int moveTokenO = 0;
-  int moveTokenX = 1;
-  int computerMove;
-  boolean playerCurrentTurn = false;
-  int computerTurnXCoord = new Random().nextInt(gameBoard.length);
-  int computerTurnYCoord = new Random().nextInt(gameBoard.length);
-  int counter = 0; 
-  
-  
 Random randomizer = new Random();
   
 void nestedForLoopToPopulateGameBoard() {
@@ -241,7 +230,7 @@ void keyPressed() {
        break;  
   }
 }
-//}
+
 
 void keyReleased() {
   playerCurrentTurn = true;
@@ -251,17 +240,102 @@ void keyReleased() {
 
 }
 
-public static String winCondition() {
-    List topRow = Arrays.asList(0,1,2);
-    List middleRow = Arrays.asList(3,4,5);
-    List bottomRow = Arrays.asList(6,7,8);
-    
-    List firstCol = Arrays.asList(0,3,6);
-    List middleCol = Arrays.asList(1,4,7);
-    List thirdCol = Arrays.asList(2,5,8);
-    
-    List leftDiagonal = Arrays.asList(0,4,8);
-    List rightDiagonal = Arrays.asList(2,4,6);
+public void winCondition() {
   
-  return "";
+ // horizontal positions,win conditions
+if(gameBoard[0][0] == moveTokenO && gameBoard[1][0] == moveTokenO && gameBoard[2][0] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+
+if(gameBoard[0][1] == moveTokenO && gameBoard[1][1] == moveTokenO && gameBoard[2][1] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+
+if(gameBoard[0][2] == moveTokenO && gameBoard[1][2] == moveTokenO && gameBoard[2][2] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+  
+  
+   // vertical positions, win conditions
+if(gameBoard[0][0] == moveTokenO && gameBoard[0][1] == moveTokenO && gameBoard[0][2] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+
+if(gameBoard[1][0] == moveTokenO && gameBoard[1][1] == moveTokenO && gameBoard[1][2] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+
+if(gameBoard[2][0] == moveTokenO && gameBoard[2][1] == moveTokenO && gameBoard[2][2] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+  
+  
+  // diagonal positions, win conditions
+if(gameBoard[0][0] == moveTokenO && gameBoard[1][1] == moveTokenO && gameBoard[2][2] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+}
+
+if(gameBoard[2][0] == moveTokenO && gameBoard[1][1] == moveTokenO && gameBoard[2][0] == moveTokenO){
+  System.out.println("Congratulations! You win!");
+  hasGameEnded = true;
+  
+}
+}
+
+
+// computers win conditions, players lose condition
+public void loseCondition() {
+  
+ // horizontal positions
+if(gameBoard[0][0] == moveTokenX && gameBoard[1][0] == moveTokenX && gameBoard[2][0] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+
+if(gameBoard[0][1] == moveTokenX && gameBoard[1][1] == moveTokenX && gameBoard[2][1] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+
+if(gameBoard[0][2] == moveTokenX && gameBoard[1][2] == moveTokenX && gameBoard[2][2] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+  
+  
+   // vertical positions
+if(gameBoard[0][0] == moveTokenX && gameBoard[0][1] == moveTokenX && gameBoard[0][2] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+
+if(gameBoard[1][0] == moveTokenX && gameBoard[1][1] == moveTokenX && gameBoard[1][2] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+
+if(gameBoard[2][0] == moveTokenX && gameBoard[2][1] == moveTokenX && gameBoard[2][2] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+  
+  
+  // diagonal positions
+if(gameBoard[0][0] == moveTokenX && gameBoard[1][1] == moveTokenX && gameBoard[2][2] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+}
+
+if(gameBoard[2][0] == moveTokenX && gameBoard[1][1] == moveTokenX && gameBoard[2][0] == moveTokenX){
+  System.out.println("CPU WINS! You lose.");
+  hasGameEnded = true;
+  
+}
 }

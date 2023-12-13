@@ -15,8 +15,13 @@ void draw() {
       keyReleased(); 
       delay(100);
       gameLogic();
+  } 
+      winCondition();
+      if(hasGameEnded == true)
+      System.exit(0); 
+      
+      loseCondition();
+      if(hasGameEnded == true)
+      System.exit(0); 
   }
-}    
-  //    winCondition();
-  //}
       

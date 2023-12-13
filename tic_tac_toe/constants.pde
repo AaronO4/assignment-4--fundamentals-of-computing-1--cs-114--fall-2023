@@ -1,1 +1,10 @@
-
+  public PShape circle;
+  public int[][] gameBoard = new int[3][3];     
+  public int moveTokenO = 0;
+  public int moveTokenX = 1;
+  public int computerMove;
+  public boolean playerCurrentTurn;
+  public int computerTurnXCoord = new Random().nextInt(gameBoard.length);
+  public int computerTurnYCoord = new Random().nextInt(gameBoard.length);
+  public int counter = 0; 
+  public boolean hasGameEnded;
