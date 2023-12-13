@@ -16,7 +16,7 @@ void draw() {
       delay(100);
       gameLogic();
   }
-      
-      winCondition();
-  }
+}    
+  //    winCondition();
+  //}
       

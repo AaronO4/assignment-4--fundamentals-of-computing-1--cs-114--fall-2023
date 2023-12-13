@@ -142,90 +142,108 @@ void keyPressed() {
   switch(key) {
     case '0':
        if(gameBoard[0][0] != moveTokenX) {
+             if(gameBoard[0][0] != moveTokenO){
          gameBoard[0][0] = moveTokenO;
        shape(circle, 10, 10);
        System.out.println(gameBoard[0][0]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '1':
     if(gameBoard[0][1] != moveTokenX) {
+      if(gameBoard[0][1] != moveTokenO){
        gameBoard[0][1] = moveTokenO;
        shape(circle, 180, 10);
        System.out.println(gameBoard[0][1]);
        delay(50);
+      }
     } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '2':
     if(gameBoard[0][2] != moveTokenX) {
+          if(gameBoard[0][2] != moveTokenO){
        gameBoard[0][2] = moveTokenO;
        shape(circle, 350, 10);
        System.out.println(gameBoard[0][2]);
        delay(50);
+          }
     } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '3':
         if(gameBoard[1][0] != moveTokenX) {
+              if(gameBoard[1][0] != moveTokenO){
        gameBoard[1][0] = moveTokenO;
        shape(circle, 10, 180);
        System.out.println(gameBoard[1][0]);
        delay(50);
+              }
         } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '4':
        if(gameBoard[1][1] != moveTokenX) {
+             if(gameBoard[1][1] != moveTokenO){
        gameBoard[1][1] = moveTokenO;
        shape(circle, 180, 180);
        System.out.println(gameBoard[1][1]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '5':
        if(gameBoard[1][2] != moveTokenX) {
+             if(gameBoard[1][2] != moveTokenO){
        gameBoard[1][2] = moveTokenO;
        shape(circle, 350, 180);
        System.out.println(gameBoard[1][2]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '6':
        if(gameBoard[2][0] != moveTokenX) {
+             if(gameBoard[2][0] != moveTokenO){
        gameBoard[2][0] = moveTokenO;
        shape(circle, 10, 350);
        System.out.println(gameBoard[2][0]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '7':
        if(gameBoard[2][1] != moveTokenX) {
+             if(gameBoard[2][1] != moveTokenO){
        gameBoard[2][1] = moveTokenO;
        shape(circle, 180, 350);
        System.out.println(gameBoard[2][1]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '8':
        if(gameBoard[2][2] != moveTokenX) {
+             if(gameBoard[2][2] != moveTokenO){
        gameBoard[2][2] = moveTokenO;
        shape(circle, 350, 350);
        System.out.println(gameBoard[2][2]);
        delay(50);
+             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
