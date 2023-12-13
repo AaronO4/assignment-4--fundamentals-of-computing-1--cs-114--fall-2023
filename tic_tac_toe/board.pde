@@ -22,86 +22,113 @@ void gameLogic() {
     
   //if(playerCurrentTurn == false){
         switch(computerMove) {
-    case '1':
-    if(gameBoard[0][0] == ' ') {
+    case 1:
+    if(gameBoard[0][0] != moveTokenO)
+      if(gameBoard[0][0] != moveTokenX) {
          strokeWeight(2);
          line(0,0,165,165);
          line(165,0,0,165);
        gameBoard[0][0] = moveTokenX;
        System.out.println(gameBoard[0][0]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-     case '2':
-     if(gameBoard[0][1] == ' ') {
+     case 2:
+     if(gameBoard[0][1] != moveTokenO) 
+       if(gameBoard[0][1] != moveTokenX) {
          strokeWeight(2);
          line(165,0,330,165);
          line(330,0,165,165);
        gameBoard[0][1] = moveTokenX;
        System.out.println(gameBoard[0][1]);
-     }
+         } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '3':
-    if(gameBoard[0][2] == ' ') {
+    case 3:
+    if(gameBoard[0][2] != moveTokenO) 
+      if(gameBoard[0][2] != moveTokenX) {
          strokeWeight(2);
          line(330,0,500,165);
          line(500,0,330,165);
        gameBoard[0][2] = moveTokenX;
        System.out.println(gameBoard[0][2]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '4':
-    if(gameBoard[1][0] == ' ') {
+    case 4:
+    if(gameBoard[1][0] != moveTokenO) 
+    if(gameBoard[1][0] != moveTokenX) {
          strokeWeight(2);
          line(0,165,165,330);
          line(165,165,0,330);
        gameBoard[1][0] = moveTokenX;
        System.out.println(gameBoard[1][0]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '5':
-    if(gameBoard[1][1] == ' ') {
+    case 5:
+    if(gameBoard[1][1] != moveTokenO) 
+    if(gameBoard[1][1] != moveTokenX) {
          strokeWeight(2);
          line(165,165,330,330);
          line(330,165,165,330);
          gameBoard[1][1] = moveTokenX;
        System.out.println(gameBoard[1][1]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '6':
-    if(gameBoard[1][2] == ' ') {
+    case 6:
+    if(gameBoard[1][2] != moveTokenO) 
+      if(gameBoard[1][2] != moveTokenX) {
          strokeWeight(2);
          line(330,165,500,330);
          line(500,165,330,330);
        gameBoard[1][2] = moveTokenX;
        System.out.println(gameBoard[1][2]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '7':
-    if(gameBoard[2][0] == ' ') {
+    case 7:
+    if(gameBoard[2][0] != moveTokenO) 
+    if(gameBoard[2][0] != moveTokenX) {
          strokeWeight(2);
          line(165,330,0,500);
          line(0,330,165,500);
        gameBoard[2][0] = moveTokenX;
        System.out.println(gameBoard[2][0]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '8':
-    if(gameBoard[2][1] == ' ') {
+    case 8:
+    if(gameBoard[2][1] != moveTokenO)
+    if(gameBoard[2][1] != moveTokenX) {
          strokeWeight(2);
          line(165,330,330,500);
          line(330,330,165,500);
        gameBoard[2][1] = moveTokenX;
        System.out.println(gameBoard[2][1]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
-    case '9':
-    if(gameBoard[2][2] == ' ') {
+    case 9:
+    if(gameBoard[2][2] != moveTokenO) 
+    if(gameBoard[2][2] != moveTokenX) {
          strokeWeight(2);
          line(500,330,330,500);
          line(330,330,500,500);
        gameBoard[2][2] = moveTokenX;
        System.out.println(gameBoard[2][2]);
-    }
+        } else { 
+         computerMove = new Random().nextInt(9+1);
+       }
        break;
   }    
   System.out.println(computerMove); 
@@ -114,7 +141,7 @@ void keyPressed() {
  if(keyPressed == true)
   switch(key) {
     case '0':
-       if(gameBoard[0][0] == ' ') {
+       if(gameBoard[0][0] != moveTokenX) {
          gameBoard[0][0] = moveTokenO;
        shape(circle, 10, 10);
        System.out.println(gameBoard[0][0]);
@@ -124,7 +151,7 @@ void keyPressed() {
        }
        break;
     case '1':
-    if(gameBoard[0][1] == ' ') {
+    if(gameBoard[0][1] != moveTokenX) {
        gameBoard[0][1] = moveTokenO;
        shape(circle, 180, 10);
        System.out.println(gameBoard[0][1]);
@@ -134,7 +161,7 @@ void keyPressed() {
        }
        break;
     case '2':
-    if(gameBoard[0][2] == ' ') {
+    if(gameBoard[0][2] != moveTokenX) {
        gameBoard[0][2] = moveTokenO;
        shape(circle, 350, 10);
        System.out.println(gameBoard[0][2]);
@@ -144,7 +171,7 @@ void keyPressed() {
        }
        break;
     case '3':
-        if(gameBoard[1][0] == ' ') {
+        if(gameBoard[1][0] != moveTokenX) {
        gameBoard[1][0] = moveTokenO;
        shape(circle, 10, 180);
        System.out.println(gameBoard[1][0]);
@@ -154,7 +181,7 @@ void keyPressed() {
        }
        break;
     case '4':
-       if(gameBoard[1][1] == ' ') {
+       if(gameBoard[1][1] != moveTokenX) {
        gameBoard[1][1] = moveTokenO;
        shape(circle, 180, 180);
        System.out.println(gameBoard[1][1]);
@@ -164,7 +191,7 @@ void keyPressed() {
        }
        break;
     case '5':
-       if(gameBoard[1][2] == ' ') {
+       if(gameBoard[1][2] != moveTokenX) {
        gameBoard[1][2] = moveTokenO;
        shape(circle, 350, 180);
        System.out.println(gameBoard[1][2]);
@@ -174,7 +201,7 @@ void keyPressed() {
        }
        break;
     case '6':
-       if(gameBoard[2][0] == ' ') {
+       if(gameBoard[2][0] != moveTokenX) {
        gameBoard[2][0] = moveTokenO;
        shape(circle, 10, 350);
        System.out.println(gameBoard[2][0]);
@@ -184,7 +211,7 @@ void keyPressed() {
        }
        break;
     case '7':
-       if(gameBoard[2][1] == ' ') {
+       if(gameBoard[2][1] != moveTokenX) {
        gameBoard[2][1] = moveTokenO;
        shape(circle, 180, 350);
        System.out.println(gameBoard[2][1]);
@@ -194,7 +221,7 @@ void keyPressed() {
        }
        break;
     case '8':
-       if(gameBoard[2][2] == ' ') {
+       if(gameBoard[2][2] != moveTokenX) {
        gameBoard[2][2] = moveTokenO;
        shape(circle, 350, 350);
        System.out.println(gameBoard[2][2]);
