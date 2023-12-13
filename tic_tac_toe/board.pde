@@ -31,7 +31,7 @@ void gameLogic() {
        gameBoard[0][0] = moveTokenX;
        System.out.println(gameBoard[0][0]);
         } else { 
-         gameLogic();
+         //case 1;
        }
        break;
      case 2:
@@ -43,7 +43,7 @@ void gameLogic() {
        gameBoard[0][1] = moveTokenX;
        System.out.println(gameBoard[0][1]);
          } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 3:
@@ -55,7 +55,7 @@ void gameLogic() {
        gameBoard[0][2] = moveTokenX;
        System.out.println(gameBoard[0][2]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 4:
@@ -67,7 +67,7 @@ void gameLogic() {
        gameBoard[1][0] = moveTokenX;
        System.out.println(gameBoard[1][0]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 5:
@@ -79,7 +79,7 @@ void gameLogic() {
          gameBoard[1][1] = moveTokenX;
        System.out.println(gameBoard[1][1]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 6:
@@ -91,7 +91,7 @@ void gameLogic() {
        gameBoard[1][2] = moveTokenX;
        System.out.println(gameBoard[1][2]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 7:
@@ -103,7 +103,7 @@ void gameLogic() {
        gameBoard[2][0] = moveTokenX;
        System.out.println(gameBoard[2][0]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 8:
@@ -115,7 +115,7 @@ void gameLogic() {
        gameBoard[2][1] = moveTokenX;
        System.out.println(gameBoard[2][1]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
     case 9:
@@ -127,9 +127,14 @@ void gameLogic() {
        gameBoard[2][2] = moveTokenX;
        System.out.println(gameBoard[2][2]);
         } else { 
-         gameLogic();
+         computerMove = new Random().nextInt(9+1);
        }
        break;
+       
+    default:   // catches numbers outside of 0-8
+       computerMove = new Random().nextInt(9+1);
+       gameLogic();
+    break; 
   }    
   System.out.println(computerMove); 
   
@@ -141,116 +146,98 @@ void keyPressed() {
  if(keyPressed == true)
   switch(key) {
     case '0':
-       if(gameBoard[0][0] != moveTokenX) {
+       if(gameBoard[0][0] != moveTokenX) 
              if(gameBoard[0][0] != moveTokenO){
          gameBoard[0][0] = moveTokenO;
        shape(circle, 10, 10);
        System.out.println(gameBoard[0][0]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '1':
-    if(gameBoard[0][1] != moveTokenX) {
+    if(gameBoard[0][1] != moveTokenX) 
       if(gameBoard[0][1] != moveTokenO){
        gameBoard[0][1] = moveTokenO;
        shape(circle, 180, 10);
        System.out.println(gameBoard[0][1]);
-       delay(50);
-      }
     } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '2':
-    if(gameBoard[0][2] != moveTokenX) {
+    if(gameBoard[0][2] != moveTokenX) 
           if(gameBoard[0][2] != moveTokenO){
        gameBoard[0][2] = moveTokenO;
        shape(circle, 350, 10);
        System.out.println(gameBoard[0][2]);
-       delay(50);
-          }
     } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '3':
-        if(gameBoard[1][0] != moveTokenX) {
+        if(gameBoard[1][0] != moveTokenX) 
               if(gameBoard[1][0] != moveTokenO){
        gameBoard[1][0] = moveTokenO;
        shape(circle, 10, 180);
        System.out.println(gameBoard[1][0]);
-       delay(50);
-              }
         } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '4':
-       if(gameBoard[1][1] != moveTokenX) {
+       if(gameBoard[1][1] != moveTokenX) 
              if(gameBoard[1][1] != moveTokenO){
        gameBoard[1][1] = moveTokenO;
        shape(circle, 180, 180);
        System.out.println(gameBoard[1][1]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '5':
-       if(gameBoard[1][2] != moveTokenX) {
+       if(gameBoard[1][2] != moveTokenX) 
              if(gameBoard[1][2] != moveTokenO){
        gameBoard[1][2] = moveTokenO;
        shape(circle, 350, 180);
        System.out.println(gameBoard[1][2]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '6':
-       if(gameBoard[2][0] != moveTokenX) {
+       if(gameBoard[2][0] != moveTokenX) 
              if(gameBoard[2][0] != moveTokenO){
        gameBoard[2][0] = moveTokenO;
        shape(circle, 10, 350);
        System.out.println(gameBoard[2][0]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '7':
-       if(gameBoard[2][1] != moveTokenX) {
+       if(gameBoard[2][1] != moveTokenX) 
              if(gameBoard[2][1] != moveTokenO){
        gameBoard[2][1] = moveTokenO;
        shape(circle, 180, 350);
        System.out.println(gameBoard[2][1]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     case '8':
-       if(gameBoard[2][2] != moveTokenX) {
+       if(gameBoard[2][2] != moveTokenX) 
              if(gameBoard[2][2] != moveTokenO){
        gameBoard[2][2] = moveTokenO;
        shape(circle, 350, 350);
        System.out.println(gameBoard[2][2]);
-       delay(50);
-             }
        } else { 
          println("Incorrect key pressed! Please select an empty space.");
        }
        break;
     default:   // catches numbers outside of 0-8
        println("Incorrect key pressed! Please select a key between 0-8"); 
-       delay(50);
+       keyPressed();
        break;  
   }
 }
