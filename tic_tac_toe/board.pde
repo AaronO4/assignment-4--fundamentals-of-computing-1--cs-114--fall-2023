@@ -31,7 +31,7 @@ void gameLogic() {
        gameBoard[0][0] = moveTokenX;
        System.out.println(gameBoard[0][0]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
      case 2:
@@ -43,7 +43,7 @@ void gameLogic() {
        gameBoard[0][1] = moveTokenX;
        System.out.println(gameBoard[0][1]);
          } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 3:
@@ -55,7 +55,7 @@ void gameLogic() {
        gameBoard[0][2] = moveTokenX;
        System.out.println(gameBoard[0][2]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 4:
@@ -67,7 +67,7 @@ void gameLogic() {
        gameBoard[1][0] = moveTokenX;
        System.out.println(gameBoard[1][0]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 5:
@@ -79,7 +79,7 @@ void gameLogic() {
          gameBoard[1][1] = moveTokenX;
        System.out.println(gameBoard[1][1]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 6:
@@ -91,7 +91,7 @@ void gameLogic() {
        gameBoard[1][2] = moveTokenX;
        System.out.println(gameBoard[1][2]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 7:
@@ -103,7 +103,7 @@ void gameLogic() {
        gameBoard[2][0] = moveTokenX;
        System.out.println(gameBoard[2][0]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 8:
@@ -115,7 +115,7 @@ void gameLogic() {
        gameBoard[2][1] = moveTokenX;
        System.out.println(gameBoard[2][1]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
     case 9:
@@ -127,7 +127,7 @@ void gameLogic() {
        gameBoard[2][2] = moveTokenX;
        System.out.println(gameBoard[2][2]);
         } else { 
-         computerMove = new Random().nextInt(9+1);
+         gameLogic();
        }
        break;
   }    
