@@ -18,11 +18,10 @@ void gameLogic() {
    computerTurnYCoord = new Random().nextInt(gameBoard.length);
    System.out.println(gameBoard[computerTurnXCoord][computerTurnYCoord]);
   
-  while(playerCurrentTurn == false)
+  if(playerCurrentTurn == false)
     if((gameBoard[computerTurnXCoord][computerTurnYCoord] != moveTokenX) && (gameBoard[computerTurnXCoord][computerTurnYCoord] != moveTokenO)) {
         gameBoard[computerTurnXCoord][computerTurnYCoord] = moveTokenX;
-        computerTurn = (computerTurnXCoord + 1) * (computerTurnYCoord + 1);
-        break;
+        computerTurn = ((computerTurnXCoord + 1) * (computerTurnYCoord + 1) - 1);
     } else {
          computerTurnXCoord = new Random().nextInt(gameBoard.length);
          computerTurnYCoord = new Random().nextInt(gameBoard.length);
