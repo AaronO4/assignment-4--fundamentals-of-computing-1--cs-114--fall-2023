@@ -11,3 +11,8 @@ void CROSS() {
   line(0,0,165,165);
   line(165,0,0,165);
 }
+
+
+     //for(int row = 0; row<3; row++)
+     //  for(int col = 0; col<3; col++)
+     //    gameBoard[row][col] = ' ';

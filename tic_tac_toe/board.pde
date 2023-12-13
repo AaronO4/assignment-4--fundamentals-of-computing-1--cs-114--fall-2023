@@ -1,18 +1,20 @@
-public void gameLogic() {
-
-         
-}
-
-void keyPressed() {
-     char moveToken = 'O';
-     PShape circle;
-     circle = createShape(ELLIPSE, 70, 70, 150, 150);
+  PShape circle;
+  char[][] gameBoard = new char[3][3];
+  char moveToken = 'O';
+  String currentMove = "computer";
   
-     char[][] gameBoard = new char[3][3];
-     for(int row = 0; row<3; row++)
-       for(int col = 0; col<3; col++)
-         gameBoard[row][col] = ' ';
-         
+void gameLogic() {
+   Random random = new Random();
+   int computerTurn = random.nextInt(9);
+    
+     if(gameBoard[0][0] != moveToken)
+        gameBoard[0][0] = moveToken;
+}
+  
+  
+void keyPressed() {
+  circle = createShape(ELLIPSE, 70, 70, 150, 150);
+  
  if(keyPressed == true)
   switch(key) {
     case '0':
