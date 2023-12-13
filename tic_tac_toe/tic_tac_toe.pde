@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 void setup() {
   size(500, 500);
@@ -10,12 +10,13 @@ void setup() {
 }
 
 void draw() {
-  playerCurrentTurn = false;
-  gameLogic();
-  computerMakesAMove();
-  playerCurrentTurn = true;
-  if(keyPressed == true){
+  if(keyPressed == true){    
       keyPressed();
+      keyReleased(); 
+      delay(100);
+      gameLogic();
   }
-  delay(40);
-}
+      
+      winCondition();
+  }
+      

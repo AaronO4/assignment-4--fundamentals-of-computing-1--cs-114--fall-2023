@@ -1,4 +1,5 @@
 void ticTacToeBoard() {
+   
   strokeWeight(2);
   line(width/3, 0, width/3, height); // first vertical line
   line(0, height/3, width, height/3); // first horizontal line

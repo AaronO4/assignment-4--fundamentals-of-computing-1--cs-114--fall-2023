@@ -1,166 +1,164 @@
   PShape circle;
-  char[][] gameBoard = new char[3][3];     
-  char moveTokenO = 'O';
-  char moveTokenX = 'X';
-  int computerTurn;
+  int[][] gameBoard = new int[3][3];     
+  int moveTokenO = 0;
+  int moveTokenX = 1;
+  int computerMove;
   boolean playerCurrentTurn = false;
   int computerTurnXCoord = new Random().nextInt(gameBoard.length);
   int computerTurnYCoord = new Random().nextInt(gameBoard.length);
+  int counter = 0; 
+  
+  
+Random randomizer = new Random();
   
 void nestedForLoopToPopulateGameBoard() {
    for(int row = 0; row<3; row++)
      for(int col = 0; col<3; col++)
        gameBoard[row][col] = ' ';
 }
-  
-void gameLogic() {
-   computerTurnXCoord = new Random().nextInt(gameBoard.length);
-   computerTurnYCoord = new Random().nextInt(gameBoard.length);
-   System.out.println(gameBoard[computerTurnXCoord][computerTurnYCoord]);
-  
-  if(playerCurrentTurn == false)
-    if((gameBoard[computerTurnXCoord][computerTurnYCoord] != moveTokenX) && (gameBoard[computerTurnXCoord][computerTurnYCoord] != moveTokenO)) {
-        gameBoard[computerTurnXCoord][computerTurnYCoord] = moveTokenX;
-        computerTurn = ((computerTurnXCoord + 1) * (computerTurnYCoord + 1) - 1);
-    } else {
-         computerTurnXCoord = new Random().nextInt(gameBoard.length);
-         computerTurnYCoord = new Random().nextInt(gameBoard.length);
-         System.out.println("Uh Oh");
-         gameBoard[computerTurnXCoord][computerTurnYCoord] = moveTokenX;
-    }
-}
-
-void computerMakesAMove() {  
-  switch(computerTurn) {
-    case '0':
-       gameBoard[0][0] = moveTokenX;
+      
+void gameLogic() {  
+    computerMove = new Random().nextInt(9+1);
+    
+if((computerMove != moveTokenX) && (computerMove != moveTokenO)) { 
+  //if(playerCurrentTurn == false){
+        switch(computerMove) {
+    case '1':
          strokeWeight(2);
          line(0,0,165,165);
          line(165,0,0,165);
+       gameBoard[0][0] = moveTokenX;
        System.out.println(gameBoard[0][0]);
-       delay(50);
        break;
-     case '1':
-       gameBoard[0][1] = moveTokenX;
+     case '2':
          strokeWeight(2);
          line(165,0,330,165);
          line(330,0,165,165);
+       gameBoard[0][1] = moveTokenX;
        System.out.println(gameBoard[0][1]);
-       delay(50);
        break;
-    case '2':
-       gameBoard[0][2] = moveTokenX;
+    case '3':
          strokeWeight(2);
          line(330,0,500,165);
          line(500,0,330,165);
+       gameBoard[0][2] = moveTokenX;
        System.out.println(gameBoard[0][2]);
-       delay(50);
        break;
-    case '3':
-       gameBoard[1][0] = moveTokenX;
+    case '4':
          strokeWeight(2);
          line(0,165,165,330);
          line(165,165,0,330);
+       gameBoard[1][0] = moveTokenX;
        System.out.println(gameBoard[1][0]);
-       delay(50);
        break;
-    case '4':
-       gameBoard[1][1] = moveTokenX;
+    case '5':
          strokeWeight(2);
          line(165,165,330,330);
          line(330,165,165,330);
+         gameBoard[1][1] = moveTokenX;
        System.out.println(gameBoard[1][1]);
-       delay(50);
        break;
-    case '5':
-       gameBoard[1][2] = moveTokenX;
+    case '6':
          strokeWeight(2);
          line(330,165,500,330);
          line(500,165,330,330);
+       gameBoard[1][2] = moveTokenX;
        System.out.println(gameBoard[1][2]);
-       delay(50);
        break;
-    case '6':
-       gameBoard[2][0] = moveTokenX;
+    case '7':
          strokeWeight(2);
          line(165,330,0,500);
          line(0,330,165,500);
+       gameBoard[2][0] = moveTokenX;
        System.out.println(gameBoard[2][0]);
-       delay(50);
        break;
-    case '7':
-       gameBoard[2][1] = moveTokenX;
+    case '8':
          strokeWeight(2);
          line(165,330,330,500);
          line(330,330,165,500);
+       gameBoard[2][1] = moveTokenX;
        System.out.println(gameBoard[2][1]);
-       delay(50);
        break;
-    case '8':
-       gameBoard[2][2] = moveTokenX;
+    case '9':
          strokeWeight(2);
          line(500,330,330,500);
          line(330,330,500,500);
+       gameBoard[2][2] = moveTokenX;
        System.out.println(gameBoard[2][2]);
-       delay(50);
        break;
- }
-}
+  }    
+  System.out.println(computerMove); 
+  
+     }
+  }
+//}
   
 void keyPressed() {
   circle = createShape(ELLIPSE, 70, 70, 150, 150);
- if(playerCurrentTurn == true) {
+ //if(playerCurrentTurn == true) {
  if(keyPressed == true)
   switch(key) {
     case '0':
-       gameBoard[0][0] = moveTokenO;
+       if((key != moveTokenX) && (key != moveTokenO))  {
+         gameBoard[0][0] = moveTokenO;
        shape(circle, 10, 10);
        System.out.println(gameBoard[0][0]);
        delay(50);
+       } else { 
+         println("Incorrect key pressed! Please select an empty space.");
+       }
        break;
     case '1':
+    if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[0][1] = moveTokenO;
        shape(circle, 180, 10);
        System.out.println(gameBoard[0][1]);
        delay(50);
        break;
     case '2':
+    if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[0][2] = moveTokenO;
        shape(circle, 350, 10);
        System.out.println(gameBoard[0][2]);
        delay(50);
        break;
     case '3':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[1][0] = moveTokenO;
        shape(circle, 10, 180);
        System.out.println(gameBoard[1][0]);
        delay(50);
        break;
     case '4':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[1][1] = moveTokenO;
        shape(circle, 180, 180);
        System.out.println(gameBoard[1][1]);
        delay(50);
        break;
     case '5':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[1][2] = moveTokenO;
        shape(circle, 350, 180);
        System.out.println(gameBoard[1][2]);
        delay(50);
        break;
     case '6':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[2][0] = moveTokenO;
        shape(circle, 10, 350);
        System.out.println(gameBoard[2][0]);
        delay(50);
        break;
     case '7':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[2][1] = moveTokenO;
        shape(circle, 180, 350);
        System.out.println(gameBoard[2][1]);
        delay(50);
        break;
     case '8':
+        if((key != moveTokenX) && (key != moveTokenO)) 
        gameBoard[2][2] = moveTokenO;
        shape(circle, 350, 350);
        System.out.println(gameBoard[2][2]);
@@ -172,4 +170,27 @@ void keyPressed() {
        break;  
   }
 }
+//}
+
+void keyReleased() {
+  playerCurrentTurn = true;
+  delay(50);
+  playerCurrentTurn = false;
+  delay(5);
+
+}
+
+public static String winCondition() {
+    List topRow = Arrays.asList(0,1,2);
+    List middleRow = Arrays.asList(3,4,5);
+    List bottomRow = Arrays.asList(6,7,8);
+    
+    List firstCol = Arrays.asList(0,3,6);
+    List middleCol = Arrays.asList(1,4,7);
+    List thirdCol = Arrays.asList(2,5,8);
+    
+    List leftDiagonal = Arrays.asList(0,4,8);
+    List rightDiagonal = Arrays.asList(2,4,6);
+  
+  return "";
 }
