@@ -15,7 +15,7 @@ void draw() {
       keyReleased(); 
       delay(100);
       gameLogic();
-  } 
+ 
       winCondition();
       if(hasGameEnded == true)
       System.exit(0); 
@@ -23,5 +23,9 @@ void draw() {
       loseCondition();
       if(hasGameEnded == true)
       System.exit(0); 
+      
+      if(hasGameEnded == false)
+      System.out.println("Game is still in play!");
+}
   }
       
