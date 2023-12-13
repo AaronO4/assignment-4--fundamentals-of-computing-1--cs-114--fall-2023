@@ -10,7 +10,10 @@ void setup() {
 }
 
 void draw() {
+  playerCurrentTurn = false;
   gameLogic();
+  computerMakesAMove();
+  playerCurrentTurn = true;
   if(keyPressed == true){
       keyPressed();
   }

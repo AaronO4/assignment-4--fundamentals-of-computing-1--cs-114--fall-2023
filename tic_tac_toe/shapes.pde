@@ -10,4 +10,5 @@ void ticTacToeBoard() {
 void CROSS() {
   line(0,0,165,165);
   line(165,0,0,165);
+  strokeWeight(2);
 }
