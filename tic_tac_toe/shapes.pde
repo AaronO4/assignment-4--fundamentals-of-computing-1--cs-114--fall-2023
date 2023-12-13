@@ -6,9 +6,6 @@ void ticTacToeBoard() {
   line(0, height * 2/3, width, height * 2/3); // second horizontal line
 }
 
-void CIRCLE() {
-   CIRCLE = createShape(ELLIPSE, 70, 70, 200, 200);
-}
    
 void CROSS() {
   line(0,0,165,165);
