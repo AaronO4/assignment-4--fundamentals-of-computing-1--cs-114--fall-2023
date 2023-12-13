@@ -20,7 +20,7 @@ void keyPressed() {
        break;
     case '1':
        gameBoard[0][1] = 'O';
-       shape(circle, 160, 10);
+       shape(circle, 180, 10);
        System.out.println(gameBoard[0][1]);
        delay(50);
        break;
@@ -32,37 +32,37 @@ void keyPressed() {
        break;
     case '3':
        gameBoard[1][0] = 'O';
-       shape(circle, 100, 100);
+       shape(circle, 10, 180);
        System.out.println(gameBoard[1][0]);
        delay(50);
        break;
     case '4':
        gameBoard[1][1] = 'O';
-       shape(circle, 200, 200);
+       shape(circle, 180, 180);
        System.out.println(gameBoard[1][1]);
        delay(50);
        break;
     case '5':
        gameBoard[1][2] = 'O';
-       shape(circle, 100, 100);
+       shape(circle, 350, 180);
        System.out.println(gameBoard[1][2]);
        delay(50);
        break;
     case '6':
        gameBoard[2][0] = 'O';
-       shape(circle, 100, 100);
+       shape(circle, 10, 350);
        System.out.println(gameBoard[2][0]);
        delay(50);
        break;
     case '7':
        gameBoard[2][1] = 'O';
-       shape(circle, 100, 100);
+       shape(circle, 180, 350);
        System.out.println(gameBoard[2][1]);
        delay(50);
        break;
     case '8':
        gameBoard[2][2] = 'O';
-       shape(circle, 300, 300);
+       shape(circle, 350, 350);
        System.out.println(gameBoard[2][2]);
        delay(50);
        break;

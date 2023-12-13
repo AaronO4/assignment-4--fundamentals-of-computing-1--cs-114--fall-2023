@@ -13,5 +13,6 @@ void setup() {
 void draw() {
   gameLogic();
   keyPressed();
-  System.out.println("Press a number from 0 to 8");  
+  System.out.println("Press a number from 0 to 8");
+  delay(40);
 }
